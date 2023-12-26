@@ -1,0 +1,102 @@
+* {
+    font-family: monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.boardInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.emptySquare {
+    background-color: #456998;
+}
+
+.snakeSquare {
+    background-color: #ccf47f;
+    ;
+}
+
+.foodSquare {
+    background-color: #f35a69;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: auto;
+    margin-top: 2.5rem;
+    border: 3px solid black;
+}
+
+#gameOver {
+    display: none;
+    font-size: 5rem;
+    background-image: linear-gradient(to right, #ec8c92, #ea8389, #e87a80,
+            #e67177, #e4686e, #e06067, #db5961,
+            #d7515a, #d04954, #c9414e, #c23848,
+            #bb2f42);
+    max-width: 40rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+#scoreBoard {
+    display: inline-flex;
+}
+
+#highScoreBoard {
+    display: inline-flex;
+}
+
+#board,
+.boardInfo {
+    max-width: 60rem;
+}
+
+#start,
+.boardInfo {
+    font-size: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-weight: 700;
+    color: white;
+    border: 3px solid #FFAAAA;
+    cursor: pointer;
+    position: relative;
+    background-color: #801515;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFAAAA;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
