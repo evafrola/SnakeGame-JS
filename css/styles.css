@@ -6,6 +6,24 @@ html {
     font-size: 62.5%;
 }
 
+/*Board and score styles*/
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: auto;
+    margin-top: 2.5rem;
+    border: 3px solid black;
+}
+
+#scoreBoard {
+    display: inline-flex;
+}
+
+#highScoreBoard {
+    display: inline-flex;
+}
+
 .boardInfo {
     display: flex;
     justify-content: space-between;
@@ -22,42 +40,13 @@ html {
 }
 
 .snakeSquare {
-    background-color: #ccf47f;
-    ;
+    background: #55AA55;
 }
 
 .foodSquare {
-    background-color: #f35a69;
-}
-
-#board {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    margin: auto;
-    margin-top: 2.5rem;
-    border: 3px solid black;
-}
-
-#gameOver {
-    display: none;
-    font-size: 5rem;
-    background-image: linear-gradient(to right, #ec8c92, #ea8389, #e87a80,
-            #e67177, #e4686e, #e06067, #db5961,
-            #d7515a, #d04954, #c9414e, #c23848,
-            #bb2f42);
-    max-width: 40rem;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-    margin: auto;
-}
-
-#scoreBoard {
-    display: inline-flex;
-}
-
-#highScoreBoard {
-    display: inline-flex;
+    background-image: url("/img/appleIcon.png");
+    background-size: cover;
+    background-color: #456998;
 }
 
 #board,
@@ -70,6 +59,25 @@ html {
     font-size: 2.5rem;
 }
 
+/*End*/
+
+/*Alert gameOver*/
+#gameOver {
+    display: none;
+    font-size: 6rem;
+    font-weight: 800;
+    color: #AA3939;
+    max-width: 40rem;
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 40rem;
+}
+
+/*End*/
+
+/*Buttons styles*/
 .btn {
     display: inline-block;
     padding: 0.9rem 1.8rem;
@@ -100,3 +108,16 @@ html {
 .btn:hover::before {
     transform: translateX(0);
 }
+
+/*End*/
+
+/*Rules info*/
+
+.rules-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    align-items: center;
+}
+
+/*End*/
