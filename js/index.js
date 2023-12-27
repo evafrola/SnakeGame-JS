@@ -172,7 +172,7 @@ function alertStarting() {
   Swal.fire({
     title: "The game will start!",
     html: "<b></b> milliseconds",
-    timer: 3000,
+    timer: 4500,
     timerProgressBar: true,
     didOpen: () => {
       Swal.showLoading();
