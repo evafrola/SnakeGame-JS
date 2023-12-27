@@ -44,7 +44,7 @@ html {
 }
 
 .foodSquare {
-    background-image: url("/img/appleIcon.png");
+    background-image: url("../img/appleIcon.png");
     background-size: cover;
     background-color: #456998;
 }
