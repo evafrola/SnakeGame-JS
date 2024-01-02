@@ -173,6 +173,7 @@ function alertStarting() {
     title: "The game will start!",
     html: "<b></b> milliseconds",
     timer: 3000,
+    allowOutsideClick: false,
     timerProgressBar: true,
     didOpen: () => {
       Swal.showLoading();
