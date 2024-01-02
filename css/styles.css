@@ -62,17 +62,13 @@ html {
 /*End*/
 
 /*Alert gameOver*/
-#gameOver {
-    display: none;
-    font-size: 6rem;
-    font-weight: 800;
-    color: #AA3939;
-    max-width: 40rem;
-    padding: 2rem;
-    text-align: center;
-    margin: auto;
-    position: relative;
-    top: 40rem;
+.title-gameOver {
+    font-size: 7rem;
+    color: red;
+}
+
+.popup-gameOver {
+    width: max-content;
 }
 
 /*End*/

@@ -3,7 +3,6 @@ const board = document.getElementById("board");
 const scoreBoard = document.getElementById("scoreBoard");
 const highScoreBoard = document.getElementById("highScoreBoard");
 const startButton = document.getElementById("start");
-const gameOverSign = document.getElementById("gameOver");
 
 //Game settings
 const boardSize = 10;
@@ -90,7 +89,17 @@ function addFood() {
 
 //Function alert game over
 function gameOver() {
-  gameOverSign.style.display = "block";
+  Swal.fire({
+    title: "Game Over",
+    color: 'red',
+    position: 'top',
+    background: 'transparent',
+    showConfirmButton: false,
+    customClass: {
+      title: 'title-gameOver',
+      popup: 'popup-gameOver',
+    }
+  });
   clearInterval(moveInterval);
   updateHighScore();
   startButton.disabled = false;
@@ -203,7 +212,6 @@ function alertStarting() {
 //Function to start the game
 function startGame() {
   setGame();
-  gameOverSign.style.display = "none";
   startButton.disabled = true;
   alertStarting();
 }
