@@ -105,16 +105,16 @@ function setDirection(newDirection) {
 function directionEvent(key) {
   switch (key.code) {
     case "ArrowUp":
-      direction != "ArrowDown" && setDirection(key.code);
+      direction !== "ArrowDown" && setDirection(key.code);
       break;
     case "ArrowDown":
-      direction != "ArrowUp" && setDirection(key.code);
+      direction !== "ArrowUp" && setDirection(key.code);
       break;
     case "ArrowLeft":
-      direction != "ArrowRight" && setDirection(key.code);
+      direction !== "ArrowRight" && setDirection(key.code);
       break;
     case "ArrowRight":
-      direction != "ArrowLeft" && setDirection(key.code);
+      direction !== "ArrowLeft" && setDirection(key.code);
       break;
   }
 }
